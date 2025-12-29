@@ -1,0 +1,149 @@
+═══════════════════════════════════════════════════════════════════
+    INSTRUÇÕES RÁPIDAS - CUSTOM ALT+TAB
+═══════════════════════════════════════════════════════════════════
+
+📋 O QUE VOCÊ PRECISA BAIXAR:
+
+1. Visual Studio 2022 Community (GRÁTIS)
+   Link: https://visualstudio.microsoft.com/pt-br/downloads/
+   
+   Durante a instalação, selecione:
+   ✓ Desenvolvimento para desktop .NET
+   ✓ .NET 6.0 SDK
+
+   OU
+
+2. .NET 6.0 SDK (mais leve, só linha de comando)
+   Link: https://dotnet.microsoft.com/pt-br/download/dotnet/6.0
+   Baixe: "SDK x64" para Windows
+
+═══════════════════════════════════════════════════════════════════
+
+🔨 COMO COMPILAR:
+
+MÉTODO 1 - Visual Studio (Mais Fácil):
+──────────────────────────────────────
+1. Abra o Visual Studio 2022
+2. Clique em "Abrir um projeto ou solução"
+3. Navegue até a pasta CustomAltTab
+4. Abra o arquivo "CustomAltTab.csproj"
+5. Pressione F5 (ou clique no botão verde "▶ CustomAltTab")
+6. Pronto! O programa será compilado e executado
+
+O executável fica em:
+CustomAltTab\bin\Debug\net6.0-windows\CustomAltTab.exe
+
+
+MÉTODO 2 - Linha de Comando (Profissional):
+────────────────────────────────────────────
+1. Abra o Prompt de Comando (CMD) ou PowerShell
+2. Navegue até a pasta do projeto:
+   cd C:\caminho\para\CustomAltTab
+
+3. Execute o comando:
+   dotnet build
+
+4. Para modo Release (otimizado):
+   dotnet build -c Release
+
+O executável fica em:
+- Debug: bin\Debug\net6.0-windows\CustomAltTab.exe
+- Release: bin\Release\net6.0-windows\CustomAltTab.exe
+
+
+MÉTODO 3 - Publicar Executável Único:
+──────────────────────────────────────
+Para criar um executável mais portátil:
+
+dotnet publish -c Release -r win-x64 --self-contained false /p:PublishSingleFile=true
+
+O executável fica em:
+bin\Release\net6.0-windows\win-x64\publish\CustomAltTab.exe
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 COMO USAR:
+
+1. Execute CustomAltTab.exe COMO ADMINISTRADOR
+   (Clique com botão direito > Executar como administrador)
+
+2. O programa ficará minimizado na bandeja (perto do relógio)
+
+3. Use:
+   - Alt+Tab rápido = Alt+Tab normal do Windows
+   - Alt+Tab segurado = Interface customizada!
+
+4. Para configurar:
+   - Clique com botão direito no ícone da bandeja
+   - Selecione "Configurações"
+
+═══════════════════════════════════════════════════════════════════
+
+⚠️ PROBLEMAS COMUNS:
+
+Problema: "Não consigo compilar"
+Solução: Certifique-se de ter instalado o .NET 6.0 SDK
+
+Problema: "Alt+Tab não funciona"
+Solução: Execute como Administrador (obrigatório!)
+
+Problema: "Erro ao abrir o projeto"
+Solução: Use Visual Studio 2022 (não funciona em versões antigas)
+
+═══════════════════════════════════════════════════════════════════
+
+📁 ESTRUTURA DOS ARQUIVOS:
+
+CustomAltTab/
+├── MainWindow.xaml           # Interface principal
+├── MainWindow.xaml.cs        # Lógica principal
+├── OverlayWindow.xaml        # Interface da roda/grid
+├── OverlayWindow.xaml.cs     # Lógica da overlay
+├── ConfigurationWindow.xaml  # Interface de config
+├── ConfigurationWindow.xaml.cs # Lógica de config
+├── SlotEditorDialog.xaml     # Editor de slots
+├── SlotEditorDialog.xaml.cs  # Lógica do editor
+├── AppConfig.cs              # Configurações
+├── WindowManager.cs          # Gerenciador de janelas
+├── App.xaml                  # Definição do app
+├── App.xaml.cs              # Lógica do app
+├── CustomAltTab.csproj      # Arquivo de projeto
+├── app.manifest             # Manifesto (admin)
+└── README.md                # Documentação completa
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 FUNCIONALIDADES:
+
+✓ Roda estilo GTA 5
+✓ Grid de janelas
+✓ Posições fixas para apps
+✓ Scroll entre janelas do mesmo app
+✓ Totalmente configurável
+✓ Alt+Tab rápido mantém comportamento padrão
+✓ Interface moderna e bonita
+✓ Ícone na bandeja do sistema
+
+═══════════════════════════════════════════════════════════════════
+
+💡 DICAS:
+
+1. Adicione ao Inicializar do Windows:
+   - Win+R > shell:startup
+   - Copie o atalho do CustomAltTab.exe
+
+2. Configure seus apps favoritos:
+   - Discord no Slot 1
+   - Navegador no Slot 2
+   - VSCode no Slot 3
+   - etc.
+
+3. Experimente ambos os modos:
+   - Roda para visual estilo GTA
+   - Grid para organização prática
+
+═══════════════════════════════════════════════════════════════════
+
+Se tiver dúvidas, leia o README.md completo!
+
+Desenvolvido com ❤️ para melhorar sua produtividade!

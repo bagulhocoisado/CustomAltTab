@@ -1,0 +1,61 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*' # Dispara quando você criar uma tag tipo v1.0.0
+  workflow_dispatch: # Permite executar manualmente
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v3
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+        
+    - name: Restaurar dependências
+      run: dotnet restore
+      
+    - name: Build Release
+      run: dotnet build -c Release --no-restore
+      
+    - name: Publish Windows x64
+      run: dotnet publish -c Release -r win-x64 --self-contained false /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true -o ./publish
+      
+    - name: Criar arquivo ZIP
+      run: Compress-Archive -Path ./publish/* -DestinationPath CustomAltTab-Windows-x64.zip
+      
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: CustomAltTab-Windows-x64
+        path: CustomAltTab-Windows-x64.zip
+        
+    - name: Criar Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: CustomAltTab-Windows-x64.zip
+        body: |
+          # Custom Alt+Tab v${{ github.ref_name }}
+          
+          ## 🎯 Funcionalidades
+          - Alt+Tab customizado com interface estilo GTA 5 ou Grid
+          - Posicionamento fixo de aplicativos
+          - Ações especiais: Minimizar, Cancelar
+          - Design moderno com blur e efeitos
+          
+          ## 📥 Download
+          Baixe o arquivo ZIP, extraia e execute `CustomAltTab.exe` como Administrador
+          
+          ## ⚠️ Requisitos
+          - Windows 10/11
+          - .NET 6.0 Runtime (baixa automaticamente se necessário)
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
