@@ -80,12 +80,12 @@ Você está jogando em fullscreen
 
 1. **Visual Studio 2022** (ou superior) com:
    - Desenvolvimento para desktop .NET
-   - .NET 6.0 SDK ou superior
+   - .NET 8.0 SDK ou superior
 
    **OU**
 
-2. **.NET 6.0 SDK** standalone:
-   - Baixe em: https://dotnet.microsoft.com/download/dotnet/6.0
+2. **.NET 8.0 SDK** standalone:
+   - Baixe em: https://dotnet.microsoft.com/download/dotnet/8.0
 
 ### Opção 1: Compilar com Visual Studio
 
@@ -111,9 +111,9 @@ dotnet publish -c Release -r win-x64 --self-contained false /p:PublishSingleFile
 ```
 
 O executável estará em:
-- Debug: `bin\Debug\net6.0-windows\CustomAltTab.exe`
-- Release: `bin\Release\net6.0-windows\CustomAltTab.exe`
-- Publish: `bin\Release\net6.0-windows\win-x64\publish\CustomAltTab.exe`
+- Debug: `bin\Debug\net8.0-windows\CustomAltTab.exe`
+- Release: `bin\Release\net8.0-windows\CustomAltTab.exe`
+- Publish: `bin\Release\net8.0-windows\win-x64\publish\CustomAltTab.exe`
 
 ### 🚀 Compilação Automática com GitHub Actions
 
@@ -179,7 +179,7 @@ CustomAltTab/
 - **C# + WPF**: Interface gráfica
 - **Windows API**: Hooks de teclado e gerenciamento de janelas
 - **XML Serialization**: Armazenamento de configurações
-- **.NET 6.0**: Framework moderno e performático
+- **.NET 8.0**: Framework moderno, performático e com suporte LTS até 2026
 
 ### Como Funciona
 

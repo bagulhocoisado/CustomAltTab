@@ -1,5 +1,20 @@
 # 🎉 CUSTOM ALT+TAB v2.0 - ATUALIZAÇÃO COMPLETA
 
+## ⚠️ IMPORTANTE: Correções Aplicadas
+
+### 🔧 Erros do GitHub Actions Corrigidos
+Identifiquei e corrigi 3 problemas que impediam a compilação:
+
+1. **✅ SystemIcons não existia** → Criado ícone customizado bonito (círculo azul com "AT")
+2. **✅ Campos não usados** → Removidos para código mais limpo
+3. **✅ .NET 6.0 obsoleto** → Atualizado para .NET 8.0 LTS (suporte até 2026)
+
+**Status:** Pronto para build no GitHub Actions! 🚀
+
+Detalhes completos em: `CORRECOES_GITHUB_ACTIONS.md`
+
+---
+
 ## 📦 O QUE VOCÊ RECEBEU
 
 ### ✨ NOVAS FUNCIONALIDADES

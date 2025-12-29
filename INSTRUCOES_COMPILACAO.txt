@@ -9,12 +9,12 @@
    
    Durante a instalação, selecione:
    ✓ Desenvolvimento para desktop .NET
-   ✓ .NET 6.0 SDK
+   ✓ .NET 8.0 SDK
 
    OU
 
-2. .NET 6.0 SDK (mais leve, só linha de comando)
-   Link: https://dotnet.microsoft.com/pt-br/download/dotnet/6.0
+2. .NET 8.0 SDK (mais leve, só linha de comando)
+   Link: https://dotnet.microsoft.com/pt-br/download/dotnet/8.0
    Baixe: "SDK x64" para Windows
 
 ═══════════════════════════════════════════════════════════════════
@@ -31,7 +31,7 @@ MÉTODO 1 - Visual Studio (Mais Fácil):
 6. Pronto! O programa será compilado e executado
 
 O executável fica em:
-CustomAltTab\bin\Debug\net6.0-windows\CustomAltTab.exe
+CustomAltTab\bin\Debug\net8.0-windows\CustomAltTab.exe
 
 
 MÉTODO 2 - Linha de Comando (Profissional):
@@ -47,8 +47,8 @@ MÉTODO 2 - Linha de Comando (Profissional):
    dotnet build -c Release
 
 O executável fica em:
-- Debug: bin\Debug\net6.0-windows\CustomAltTab.exe
-- Release: bin\Release\net6.0-windows\CustomAltTab.exe
+- Debug: bin\Debug\net8.0-windows\CustomAltTab.exe
+- Release: bin\Release\net8.0-windows\CustomAltTab.exe
 
 
 MÉTODO 3 - Publicar Executável Único:
@@ -58,7 +58,7 @@ Para criar um executável mais portátil:
 dotnet publish -c Release -r win-x64 --self-contained false /p:PublishSingleFile=true
 
 O executável fica em:
-bin\Release\net6.0-windows\win-x64\publish\CustomAltTab.exe
+bin\Release\net8.0-windows\win-x64\publish\CustomAltTab.exe
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -82,7 +82,7 @@ bin\Release\net6.0-windows\win-x64\publish\CustomAltTab.exe
 ⚠️ PROBLEMAS COMUNS:
 
 Problema: "Não consigo compilar"
-Solução: Certifique-se de ter instalado o .NET 6.0 SDK
+Solução: Certifique-se de ter instalado o .NET 8.0 SDK
 
 Problema: "Alt+Tab não funciona"
 Solução: Execute como Administrador (obrigatório!)

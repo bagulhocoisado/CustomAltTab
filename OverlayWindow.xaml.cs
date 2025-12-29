@@ -21,8 +21,6 @@ namespace CustomAltTab
     {
         private List<WindowInfo> windows;
         private int selectedIndex = 0;
-        private List<WindowInfo> selectedAppWindows = new List<WindowInfo>();
-        private int selectedAppWindowIndex = 0;
         private Dictionary<FrameworkElement, Storyboard> hoverAnimations = new Dictionary<FrameworkElement, Storyboard>();
         
         // Win32 API para minimizar janela

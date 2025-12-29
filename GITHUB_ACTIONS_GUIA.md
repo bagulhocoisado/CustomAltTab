@@ -134,10 +134,10 @@ jobs:
     - name: Baixar código
       uses: actions/checkout@v3
       
-    - name: Instalar .NET 6.0
+    - name: Instalar .NET 8.0
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '8.0.x'
         
     - name: Compilar projeto
       run: dotnet build -c Release

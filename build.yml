@@ -17,7 +17,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.0.x'
+        dotnet-version: '8.0.x'
         
     - name: Restaurar dependências
       run: dotnet restore
@@ -56,6 +56,6 @@ jobs:
           
           ## ⚠️ Requisitos
           - Windows 10/11
-          - .NET 6.0 Runtime (baixa automaticamente se necessário)
+          - .NET 8.0 Runtime (baixa automaticamente se necessário)
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
